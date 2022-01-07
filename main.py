@@ -79,6 +79,7 @@ def webhook1():
 def get():
     return "fib.pivot.alerts.bot Running" , 200
 
-if __name__ == '__main__':
-    # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True)
+if __name__ == "__main__":
+    from waitress import serve
+    logger.info("Started")
+    serve(app, host="0.0.0.0", port=80)
