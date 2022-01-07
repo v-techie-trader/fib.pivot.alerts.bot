@@ -29,7 +29,7 @@ send_slack_alerts = False
 slack_webhook = ""  # Slack Webhook URL (https://api.slack.com/messaging/webhooks)
 
 # Curl Settings
-send_curl_alerts = false
+send_curl_alerts = False
 curl_webhook = "http://127.0.0.1:8888/frostybot"  
 
 # Twitter Settings
