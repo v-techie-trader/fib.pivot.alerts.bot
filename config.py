@@ -10,7 +10,7 @@
 # }
 
 sec_key1 = (
-    "lenh1"  # Can be anything. Has to match with "key" in your TradingView alert message. Lenh cancel, close
+    "fib.pivot.alerts"  # Can be anything. Has to match with "key" in your TradingView alert message. Lenh cancel, close
 )
 sec_key2 = (
     "lenh2"  # Can be anything. Has to match with "key" in your TradingView alert message. lenh order trade
