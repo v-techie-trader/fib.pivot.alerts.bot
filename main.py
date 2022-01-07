@@ -78,3 +78,6 @@ def webhook1():
 @app.route("/", methods=["GET"])
 def get():
     return "fib.pivot.alerts.bot Running" , 200
+
+if __name__ == "__main__":
+    app.run()
