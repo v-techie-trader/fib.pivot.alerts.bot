@@ -29,7 +29,7 @@ def webhook():
         if request.method == "POST":
             data = request.get_json()
             key = data["key"]
-            
+            logging.info(f"--- data {data}")
             if key == config.sec_key1:
                 print(get_timestamp(), "Alert Received & Sent!")
                 send_alert(data)
@@ -48,6 +48,7 @@ def webhook():
 
     except Exception as e:
         print("[X]", get_timestamp(), "Error:\n>", e)
+        logging.exception(e)
         return "Error", 400
 
 @app.route("/webhook1", methods=["POST"])
