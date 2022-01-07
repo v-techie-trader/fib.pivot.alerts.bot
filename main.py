@@ -78,8 +78,3 @@ def webhook1():
 @app.route("/", methods=["GET"])
 def get():
     return "fib.pivot.alerts.bot Running" , 200
-
-if __name__ == "__main__":
-    from waitress import serve
-    logger.info("Started")
-    serve(app, host="0.0.0.0", port=80)
