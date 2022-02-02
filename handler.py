@@ -22,7 +22,21 @@ def send_message(msg):
         tg_bot = Bot(token=config.tg_token)
         try:
             tg_bot.sendMessage(
-                config.channel,
+                config.channel_1,
+                msg
+                .encode("latin-1", "backslashreplace")
+                .decode("unicode_escape"),
+                parse_mode="MARKDOWN",
+            )
+        except Exception as e:
+            print("[X] Telegram Error:\n>", e)
+
+def send_message_to_channel(msg, channel):
+    if config.send_telegram_alerts:
+        tg_bot = Bot(token=config.tg_token)
+        try:
+            tg_bot.sendMessage(
+                channel,
                 msg
                 .encode("latin-1", "backslashreplace")
                 .decode("unicode_escape"),
@@ -44,7 +58,7 @@ def send_alert(data):
             )
         except KeyError:
             tg_bot.sendMessage(
-                config.channel,
+                config.channel_1,
                 data["msg"]
                 .encode("latin-1", "backslashreplace")
                 .decode("unicode_escape"),

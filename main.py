@@ -32,14 +32,13 @@ def webhook(name):
             logging.info(f"--- data '{key}' {config.sec_key1} {msg}")
             if key == config.sec_key1:
                 print(get_timestamp(), "Alert Received & Sent!")
-                send_message(msg)
+                send_message_to_channel(msg, config.channel_1)
                 return "Sent alert", 200
             elif key == config.sec_key2:
                 print(get_timestamp(), "Alert Received & Sent!")
-                send_message(msg)
+                send_message_to_channel(msg, config.channel_2)
                 return "Sent alert", 200
             else:
-                
                 print("[X]", get_timestamp(), "Alert Received & Refused! (Wrong Key)")
                 return "Refused alert", 400
 
@@ -52,18 +51,16 @@ def webhook(name):
 def webhook1():
     try:
         if request.method == "POST":
-            data1 = request.get_json()
-            key1 = data["key"]
-            sleeptime2 = data["sleeptime"]
-            sleeptime3 = int(sleeptime2)
-            if key1 == config.sec_key1:
+            msg = str(request.get_data(as_text=True))
+            key = name
+            logging.info(f"--- data '{key}' {config.sec_key1} {msg}")
+            if key == config.sec_key1:
                 print(get_timestamp(), "Alert Received & Sent!")
-                send_alert(data)
+                send_message(msg)
                 return "Sent alert", 200
-            elif key1 == config.sec_key2:
-                time.sleep(sleeptime3)
+            elif key == config.sec_key2:
                 print(get_timestamp(), "Alert Received & Sent!")
-                send_alert(data)
+                send_message(msg)
                 return "Sent alert", 200
             else:
                 
