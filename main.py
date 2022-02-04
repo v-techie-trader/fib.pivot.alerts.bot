@@ -93,10 +93,10 @@ def valerts(name):
             t1_level= json_data['t1_level']
             t2_level=json_data['t2_level']
             chart_link=json_data['chart_link']
+            chart_link = chart_link + f"&interval={trading_timeframe}"
 
-
-            message = f"<u>{mode} <b>{trade_type} {script}</b> @ {entry_level}</u>\n"
-            message += f"<a href=\"{chart_link}\">Chart in Tradingview</a>\n\n"
+            message = f"{mode} <b>{trade_type} {script}</b> @ {entry_level}\n"
+            message += f"<u><a href=\"{chart_link}\">Chart in Tradingview</a></u>\n\n"
             if(trade_type=="SHORT"):
                 message+=\
                 f"<pre>|- {avg_level}   AVG      {avg}</pre>\n" + \
