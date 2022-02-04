@@ -95,8 +95,8 @@ def valerts(name):
             chart_link=json_data['chart_link']
 
 
-            message = f"<u>{mode} <b>{trade_type} <a href=\"{chart_link}\">{script}</a></b> @ {entry_level}</u>\n"
-            message +=f"<b><u>CMP</u></b> : <i>{close}</i>    <b><u>RSI {trading_timeframe}</u></b> : <i>{rsi_trading_timeframe}</i>      <b><u>RSI  {higher_timeframe}</u></b> : <i>{rsi_higher_timeframe}</i>\n"
+            message = f"<u>{mode} <b>{trade_type} {script}</b> @ {entry_level}</u>\n"
+            message += f"<a href=\"{chart_link}\">Chart in Tradingview</a>\n"
             if(trade_type=="SHORT"):
                 message+=\
                 f"<pre>|- {avg_level}   AVG      {avg}</pre>\n" + \
@@ -109,9 +109,9 @@ def valerts(name):
                 f"<pre>|- {t2_level}   T2       {t2}</pre>\n" +\
                 f"<pre>|- {t1_level}   T1       {t1}</pre>\n" +\
                 f"<pre>|- {entry_level}   [ENTRY]  {entry}</pre>\n" +\
-                f"<pre>|- {avg_level}   AVG      {avg}</pre>\n" 
-
-            # message += f"Open Tradingview chart => <a href=\"{chart_link}\"><b>{script}</b></a>\n"+\
+                f"<pre>|- {avg_level}   AVG      {avg}</pre>\n\n" 
+           
+            message +=f"<b><u>CMP</u></b> : <i>{close}</i>    <b><u>RSI {trading_timeframe}</u></b> : <i>{rsi_trading_timeframe}</i>      <b><u>RSI  {higher_timeframe}</u></b> : <i>{rsi_higher_timeframe}</i>\n"
     
             logging.info(f"\n{message}")
             if key == config.sec_key1:
