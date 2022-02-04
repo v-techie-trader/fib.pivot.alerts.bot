@@ -67,7 +67,7 @@ def webhook(name):
 # 	"t2_level": "P "
 # }
 
-@app.route("/<name>/valerts", methods=["POST"])
+@app.route("/<name>/alerts", methods=["POST"])
 def valerts(name):
    try:
         if request.method == "POST":
