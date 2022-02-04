@@ -19,7 +19,7 @@ import config
 
 def send_message(msg):
     if config.send_telegram_alerts:
-        tg_bot = Bot(token=config.tg_token)
+        tg_bot = Bot(token=config.tg_token_1)
         try:
             tg_bot.sendMessage(
                 config.channel_1,
@@ -31,16 +31,16 @@ def send_message(msg):
         except Exception as e:
             print("[X] Telegram Error:\n>", e)
 
-def send_message_to_channel(msg, channel):
+def send_message_to_channel(msg, channel_, token_):
     if config.send_telegram_alerts:
-        tg_bot = Bot(token=config.tg_token)
+        tg_bot = Bot(token=token_)
         try:
             tg_bot.sendMessage(
-                channel,
+                channel_,
                 msg
                 .encode("latin-1", "backslashreplace")
                 .decode("unicode_escape"),
-                parse_mode="MARKDOWN",
+                parse_mode="HTML",
             )
         except Exception as e:
             print("[X] Telegram Error:\n>", e)
