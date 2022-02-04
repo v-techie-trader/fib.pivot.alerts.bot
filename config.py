@@ -13,7 +13,7 @@ sec_key1 = (
     "fib.pivot.alerts"  # Can be anything. Has to match with "key" in your TradingView alert message. Lenh cancel, close
 )
 sec_key2 = (
-    "tradingview.alerts.v"  # Can be anything. Has to match with "key" in your TradingView alert message. lenh order trade
+    "tv.alerts"  # Can be anything. Has to match with "key" in your TradingView alert message. lenh order trade
 )
 # Telegram Settings
 send_telegram_alerts = True
