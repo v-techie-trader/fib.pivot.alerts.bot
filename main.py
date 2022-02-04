@@ -74,7 +74,7 @@ def valerts(name):
             msg = str(request.get_data(as_text=True))
             key = name
             
-            logging.info(f"--- data '{key}'  data-> {msg} \n")
+            logging.info(f"--- data '{key}' ") # data-> {msg} \n")
             json_data=json.loads(msg)
             mode = json_data['mode']
             script = json_data['script']
