@@ -96,7 +96,7 @@ def valerts(name):
             chart_link = chart_link + f"&interval={trading_timeframe}"
 
             message = f"{mode} <b>{trade_type} {script}</b> @ {entry_level}\n"
-            message += f"<u><a href=\"{chart_link}\">Chart in Tradingview</a></u>\n\n"
+            message += f"<u><a href=\"{chart_link}\">{trading_timeframe}m Chart in Tradingview</a></u>\n\n"
             if(trade_type=="SHORT"):
                 message+=\
                 f"<pre>|- {avg_level}   AVG      {avg}</pre>\n" + \
