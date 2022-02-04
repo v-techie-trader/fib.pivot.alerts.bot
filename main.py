@@ -96,13 +96,13 @@ def valerts(name):
 
 
             message = f"<u>{mode} <b>{trade_type} {script}</b> @ {entry_level}</u>\n"
-            message += f"<a href=\"{chart_link}\">Chart in Tradingview</a>\n"
+            message += f"<a href=\"{chart_link}\">Chart in Tradingview</a>\n\n"
             if(trade_type=="SHORT"):
                 message+=\
                 f"<pre>|- {avg_level}   AVG      {avg}</pre>\n" + \
                 f"<pre>|- {entry_level}   [ENTRY]  {entry}</pre>\n" +\
                 f"<pre>|- {t1_level}   T1       {t1}</pre>\n" +\
-                f"<pre>|- {t2_level}   T2       {t2}</pre>\n"
+                f"<pre>|- {t2_level}   T2       {t2}</pre>\n\n"
 
             elif (trade_type=="LONG"):
                 message+=\
