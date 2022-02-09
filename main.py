@@ -116,7 +116,10 @@ def valerts(name):
             logging.info(f"\n{message}")
             if key == config.sec_key1:
                 print(get_timestamp(), "Alert Received & Sent!")
-                send_message_to_channel(message, config.channel_1, config.tg_token_1)
+                if(higher_timeframe=="W"):
+                    send_message_to_channel(message, config.channel_swing, config.tg_token_1)
+                elif(higher_timeframe=="D"):
+                    send_message_to_channel(message, config.channel_1, config.tg_token_1)
                 return "Sent alert", 200
             elif key == config.sec_key2:
                 print(get_timestamp(), "Alert Received & Sent!")
