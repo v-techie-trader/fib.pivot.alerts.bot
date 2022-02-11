@@ -22,6 +22,7 @@ tg_token_2 = "5234081047:AAGzrmiBkZJk54fRvFwgBohTsxog9o0titw"  # Bot token. Get 
 channel_1 = -1001620765727 # Channel ID (ex. -1001487568087)
 channel_2 = -1001522073506 # Channel ID (ex. -1001487568087)
 channel_swing = -1001578432315
+channel_long = -1001631403498
 
 # Discord Settings
 send_discord_alerts = False
