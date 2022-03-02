@@ -112,7 +112,7 @@ def valerts(name):
                 f"<pre>|- {avg_level}   AVG      {avg}</pre>\n\n" 
            
             message +=f"<b><u>CMP</u></b> : <i>{close}</i>    <b><u>RSI {trading_timeframe}</u></b> : <i>{rsi_trading_timeframe}</i>      <b><u>RSI  {higher_timeframe}</u></b> : <i>{rsi_higher_timeframe}</i>\n"
-    
+            extreme_cases=["R5", "R4", "R3", "S3", "S4", "S5"]
             logging.info(f"\n{message}")
             if key == config.sec_key1:
                 print(get_timestamp(), "Alert Received & Sent!")
@@ -123,6 +123,11 @@ def valerts(name):
 
                 if(trade_type=="LONG"):
                     send_message_to_channel(message, config.channel_long, config.tg_token_1)
+
+                if (script in config.private_list or entry in extreme_cases) :
+                    send_message_to_channel(message, config.channel_private, config.tg_token_1)
+
+
                 return "Sent alert", 200
             elif key == config.sec_key2:
                 print(get_timestamp(), "Alert Received & Sent!")

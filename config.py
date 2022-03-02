@@ -23,6 +23,7 @@ channel_1 = -1001620765727 # Channel ID (ex. -1001487568087)
 channel_2 = -1001522073506 # Channel ID (ex. -1001487568087)
 channel_swing = -1001578432315
 channel_long = -1001631403498
+channel_private= -1001654109065
 
 # Discord Settings
 send_discord_alerts = False
@@ -53,3 +54,32 @@ email_port = 465  # SMTP SSL Port (ex. 465)
 email_host = ""  # SMTP host (ex. smtp.gmail.com)
 email_user = ""  # SMTP Login credentials
 email_password = ""  # SMTP Login credentials
+
+private_list = [
+    "ETHUSDT",
+    "ALGOUSDTPERP",
+    "ALICEUSDTPERP",
+    "AUDIOUSDTPERP",
+    "BAKEUSDTPERP",
+    "BALUSDTPERP",
+    "BANDUSDTPERP",
+    "BATUSDTPERP",
+    "COMPUSDTPERP",
+    "DOGEUSDTPERP",
+    "DYDXUSDTPERP",
+    "ENJUSDTPERP",
+    "GRTUSDTPERP",
+    "HNTUSDTPERP",
+    "ICPUSDTPERP",
+    "ICXUSDTPERP",
+    "KSMUSDTPERP",
+    "MANAUSDTPERP",
+    "MKRUSDTPERP",
+    "OMGUSDTPERP",
+    "SANDUSDTPERP",
+    "SCUSDTPERP",
+    "SKLUSDTPERP",
+    "STORJUSDTPERP",
+    "SXPUSDTPERP",
+    "TRBUSDTPERP"
+    ]
