@@ -124,7 +124,7 @@ def valerts(name):
                 if(trade_type=="LONG"):
                     send_message_to_channel(message, config.channel_long, config.tg_token_1)
 
-                if (script in config.private_list or entry in extreme_cases) :
+                if (script in config.private_list or entry_level in extreme_cases) :
                     send_message_to_channel(message, config.channel_private, config.tg_token_1)
 
 
