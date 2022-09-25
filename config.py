@@ -10,7 +10,7 @@
 # }
 
 sec_key1 = (
-    "fib.pivot.alerts"  # Can be anything. Has to match with "key" in your TradingView alert message. Lenh cancel, close
+    "v.alerts"  # Can be anything. Has to match with "key" in your TradingView alert message. Lenh cancel, close
 )
 sec_key2 = (
     "tv.alerts"  # Can be anything. Has to match with "key" in your TradingView alert message. lenh order trade
@@ -19,7 +19,7 @@ sec_key2 = (
 send_telegram_alerts = True
 tg_token_1 = "5089014574:AAGa7J9DqvM7I0Rxt7t5grxtKzF0uTwq7xE"  # Bot token. Get it from @Botfather
 tg_token_2 = "5234081047:AAGzrmiBkZJk54fRvFwgBohTsxog9o0titw"  # Bot token. Get it from @Botfather
-channel_1 = -1001620765727 # Channel ID (ex. -1001487568087)
+channel_1 = -1001565552854 # Channel ID (ex. -1001487568087)
 channel_2 = -1001522073506 # Channel ID (ex. -1001487568087)
 channel_swing = -1001578432315
 channel_long = -1001631403498

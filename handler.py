@@ -37,11 +37,11 @@ def send_message_to_channel(msg, channel_, token_):
         try:
             tg_bot.sendMessage(
                 channel_,
-                msg
-                .encode("latin-1", "backslashreplace")
-                .decode("unicode_escape"),
-                parse_mode="HTML",
-                disable_web_page_preview=True
+                    msg
+                    .encode("latin-1", "backslashreplace")
+                    .decode("unicode_escape"),
+                    parse_mode="HTML",
+                    disable_web_page_preview=True
             )
         except Exception as e:
             print("[X] Telegram Error:\n>", e)
